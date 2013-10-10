@@ -1,15 +1,21 @@
 <!DOCTYPE html>
+<!-- neccessary to declare to Angular that there will be an 'ng' attributes in the following html elements -->
 <html ng-app>
 <head>
     <title>Angular Introductory ~ 01 - ngModel (10 minutes - 1 feature)</title>
 </head>
 <body>
     <div>
+
         <label>Name:</label>
+        <!-- ng-model attribute links to a variable, which you can declare implicitly even in HTML-->
         <input type="text" ng-model="yourName" placeholder="Enter a name here">
         <hr>
+        <!-- handlebars template notation {{ }} used when you want to show the variable value from within a HTML element -->
         <h1>Hello {{yourName}}!</h1>
     </div>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+
+    <!-- strive to load your javascript files at the end -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
 </body>
 </html>
