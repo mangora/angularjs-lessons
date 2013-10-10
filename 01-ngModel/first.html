@@ -7,8 +7,11 @@
 <body>
     <div>
         <label>Name:</label>
-        <!-- ng-model attribute links to a variable, which you can declare implicitly even in HTML-->
+        <!-- ng-model attribute binds to a variable, which you can declare implicitly even in HTML-->
         <input type="text" ng-model="yourName" placeholder="Enter a name here">
+        <!-- you can define ng-model attribute that binds to the same variable to multiple HTML elements-->
+        <!-- if you change the variable value at one ng-model you will its instant change to all HTMl elements that reference it -->
+        <input type="text" ng-model="yourName" placeholder="Another time here">
         <hr>
         <!-- handlebars template notation {{ }} used when you explicitly want to show the variable value from within a HTML element -->
         <h1>Hello {{yourName}}!</h1>
