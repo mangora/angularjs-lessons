@@ -1,0 +1,5 @@
+## IntelliJ files to ignore
+*.iml
+*.ipr
+*.iws
+.idea/*
