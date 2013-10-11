@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Angular Introductory ~ 02 - ngShow, ngHide, ngClass, ngStyle (10 minutes - 1 feature)</title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+
+        <div class="panel-body">
+
+            <div class="jumbotron">
+                <h1>Angular.js ng-show</h1>
+            </div>
+            <label>Type in a name of a color</label>
+            <input ng-model="colorName"/>
+            <div ng-show="colorName.length > 3">
+                This represents <span ng-bind="colorName"></span> color
+            </div>
+            <div ng-hide="colorName.length > 0">
+                When you start typing this will disappear
+            </div>
+            <div ng-class="{'jumbotron': colorName.length > 5}">
+                <h1>Angular.js ng-class</h1>
+            </div>
+            <div ng-style="{'color': colorName}">
+                <h1>Angular.js ng-style</h1>
+            </div>
+        </div><!-- /.container -->
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <!-- strive to load your javascript files at the end -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+    </body>
+</html>
