@@ -1,5 +1,22 @@
-## IntelliJ files to ignore
-*.iml
+############
+## Windows #
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Mac crap
+.DS_Store
+
+
+#########
+# IDEA ##
+#########
 *.ipr
 *.iws
-.idea/*
+.idea
+*.iml
+atlassian-ide-plugin.xml
