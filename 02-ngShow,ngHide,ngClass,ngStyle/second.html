@@ -19,19 +19,23 @@
             <div class="jumbotron">
                 <h1>Angular.js ng-show</h1>
             </div>
+            <!-- based on colorName value we will specify-->
             <label>Type in a name of a color</label>
-            <input ng-model="colorName"/>
-            <div ng-show="colorName.length > 3">
-                This represents <span ng-bind="colorName"></span> color
+            <input ng-model="color.name"/>
+            <div ng-show="color.name.length > 3">
+                This represents <span ng-bind="color.mame"></span> color
             </div>
-            <div ng-hide="colorName.length > 0">
+            <div ng-hide="color.name.length > 0">
                 When you start typing this will disappear
             </div>
-            <div ng-class="{'jumbotron': colorName.length > 5}">
+            <div ng-class="{'jumbotron': color.name.length > 5}">
                 <h1>Angular.js ng-class</h1>
             </div>
-            <div ng-style="{'color': colorName}">
-                <h1>Angular.js ng-style</h1>
+            <div ng-style="{'background-color': color.name}">
+                <h1>Angular.js ng-style - we are changing the color based on the value</h1>
+            </div>
+            <div>
+                <span ng-style="{'font-size': color.name.length + 'px'}">Font size is based on the length of the variable</span>
             </div>
         </div><!-- /.container -->
 
