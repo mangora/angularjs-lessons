@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- here we now specify which application module we -->
+<html ng-app="mangoraApp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Angular Introductory ~ 03 - ngController, ngClick (10 minutes - 1 feature)</title>
+
+<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+    </head>
+    <body>
+    <!--
+        When using controller without a defined template ~ partial views,
+        we have to define a controller on a HTML element.
+        All ng-directives inside the element that has the ng-controller directive,
+        are tied to its defined controller
+    -->
+        <div class="panel-body" ng-controller="MainCtrl">
+
+            <div class="page-header">
+                <h1>Angular.js ng-Controller, ngClick</h1>
+            </div>
+            <div class="row">
+                <!--
+                    Note: you can only define one ng-model for one input!
+                    In the first case there are two, but only the first one (userName) will be used, since it first set its bindings
+                -->
+                <div class="col-lg-3">
+                    <label>first one with ng-model 'userName' defined as first ng-model</label>
+                    <input type="text" class="form-control" ng-model="userName" ng-model="user.name"/>
+                </div>
+                <!--
+                    In the second case there are also two, but only the first one (user.name) will be used, since it first set its bindings
+                -->
+                <div class="col-lg-3">
+                    <label>second one with ng-model 'user.name' defined as first ng-model</label>
+                    <input type="text" class="form-control" ng-model="user.name" ng-model="userName"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <hr>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="panel-title">These are the values of userName and user.name variables</span>
+                        </div>
+                        <div class="panel-body">
+                            <div>
+                                <strong>this is 'userName' :</strong>  <pre ng-bind="userName"></pre>
+                            </div>
+                            <div>
+                                <strong>this is 'user.name' :</strong>  <pre ng-bind="user.name"></pre>
+                            </div>
+                            <!-- this HTML button is inside the ng-controller element and so it can reach the 'callMe' function-->
+                            <button class="btn btn-success" ng-click="callMe()">Click on me, I am inside the ng-controller</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+        <!-- this HTML element is outside the ng-controller element and so it can not reach the 'callMe' function-->
+        <button class="btn btn-warning" ng-click="callMe()">When you click on me, nothing will happen</button>
+        <!-- strive to load your javascript files at the end -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </body>
+</html>
