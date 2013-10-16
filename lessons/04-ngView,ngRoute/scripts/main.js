@@ -34,13 +34,27 @@ var app = angular.module('mangoraApp', ['ngRoute'])
          */
         $routeProvider
             .when('/', {templateUrl: 'views/main.html', controller: 'MainCtrl'})
+            .when('/additional', {templateUrl: 'views/additional.html', controller: 'AdditionalCtrl'})
             .otherwise({redirectTo: '/'});
+
+        /**
+         * Note: Two views CAN have a same controller.
+         */
 });
 
 app.controller('MainCtrl', function($scope) {
 
     $scope.callMe = function () {
-        alert("You rang!");
+        alert("Main rang!");
+    };
+
+});
+
+
+app.controller('AdditionalCtrl', function($scope) {
+
+    $scope.callMe = function () {
+        alert("Additional rang!");
     };
 
 });
