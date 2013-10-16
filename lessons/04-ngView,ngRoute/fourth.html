@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="mangoraApp">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Mangora Angular.js lessons">
+        <meta name="author" content="simalexan">
+        <title>Angular Introductory ~ 04 - ngView, ngRoute (10 minutes - 1 feature)</title>
+
+        <!-- Latest compiled and minified Bootstrap 3 CSS -->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <!-- Optional theme for Bootstrap-->
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="http://getbootstrap.com/examples/navbar/navbar.css">
+    </head>
+    <body>
+        <div class="container">
+
+            <!-- Static navbar -->
+            <div class="navbar navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Angular.js lessons</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">First view</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+            <!--
+                The following button and its ng-click directive won't work since its outside the view.
+                Be very careful, if a directive is outside of the assigned view of the controller,
+                it will be outside of its scope
+
+            -->
+            <button class="btn btn-primary" ng-click="callMe()">Outside of the view, hence outside the controller scope</button>
+
+            <!--
+                Based on the current route, the application puts the corresponding HTML template
+                inside the ng-view directive
+             -->
+            <div ng-view=""></div>
+
+
+        </div> <!-- /container -->
+
+        <!-- start of our javascript files -->
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+
+            <!--
+                We have added ngRoute as a module extension to core Angular.js
+                (a little while ago, it was a part of the core Angular.js itself)
+                now we have to add it
+            -->
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.min.js"></script>
+
+            <!-- our application script -->
+            <script type="text/javascript" src="scripts/main.js"></script>
+        <!-- end of javascript files -->
+    </body>
+</html>
