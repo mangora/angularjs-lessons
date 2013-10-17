@@ -1,6 +1,6 @@
 <div class="container">
     <div class="restaurant-search row">
-        <span class="col-md-8">Restaurants:</span>
+        <span class="col-md-8">Choose restaurants:</span>
         <div class="col-md-4">
             <input type="text" class="form-control" ng-model="restaurantQuery" placeholder="Type in to search"/>
         </div>
@@ -23,7 +23,7 @@
              *Note! The filter is being applied to all object properties.
 
         -->
-        <div class="restaurant-item row" ng-repeat="restaurant in restaurants | filter: restaurantQuery">
+        <div class="restaurant-item row" ng-repeat="restaurant in restaurants | limitTo: 1 | filter: restaurantQuery">
             <div class="restaurant-item-image col-md-3" ng-style="{'background-image': 'url(\'' +restaurant.img+ '\')'}"></div>
             <div class="restaurant-item-content col-md-8">
                 <div class="restaurant-item-title">{{ restaurant.title }}</div>
