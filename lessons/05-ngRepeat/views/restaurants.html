@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="restaurant-search row">
+        <span class="col-md-8">Restaurants:</span>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="restaurantQuery" placeholder="Type in to search"/>
+        </div>
+    </div>
+    <div class="restaurant-list">
+        <!--
+            ngRepeat represents a directive which has the role of displaying a list of elements.
+            It is one of the most useful and most interesting directives.
+            It is composed of three required elements (and many other that are optional):
+                    - the actual list, defined in the controller
+                    - the ng-repeat attribute defined in the HTML element
+                    - the ng-repeat attribute value (in our case ~ "restaurant in restaurants")
+
+            * In our case, inside the ng-repeat attribute value,
+              we have one optional attribute 'filter' ~ which takes in a variable.
+              In our case it is 'restaurantQuery'.
+              Based on the value the ng-repeat filters all elements that contain it.
+
+             *Note! The filter is being applied to all object properties.
+
+        -->
+        <div class="restaurant-item row" ng-repeat="restaurant in restaurants | filter: restaurantQuery">
+            <div class="restaurant-item-image col-md-3" ng-style="{'background-image': 'url(\'' +restaurant.img+ '\')'}"></div>
+            <div class="restaurant-item-content col-md-8">
+                <div class="restaurant-item-title">{{ restaurant.title }}</div>
+                <div class="restaurant-item-address">
+                    <span class="glyphicon glyphicon-home"></span> {{ restaurant.address }}
+                </div>
+                <div class="restaurant-item-telephone">
+                    <span class="glyphicon glyphicon-earphone"></span> {{ restaurant.telephone }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
