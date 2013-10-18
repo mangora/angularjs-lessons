@@ -40,9 +40,9 @@
                           String values with handlebar variables you do not need to use a concatenation symbol '+'.
                           You can see it in our example in the following line.
 
-                          -> ng-href="/restaurants/{{restaurant.id}}"
+                          -> ng-href="#/restaurants/{{restaurant.id}}"
                 -->
-                <a class="restaurant-item-title" ng-bind="restaurant.title" ng-href="/restaurant/{{restaurant.id}}"></a>
+                <a class="restaurant-item-title" ng-bind="restaurant.title" ng-href="#/restaurant/{{restaurant.id}}"></a>
                 <div class="restaurant-item-address">
                     <span class="glyphicon glyphicon-home"></span> <span ng-bind="restaurant.address"></span>
                 </div>
