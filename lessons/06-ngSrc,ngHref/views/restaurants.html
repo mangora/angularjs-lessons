@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="restaurant-search row">
+        <span class="col-md-8">Choose restaurants:</span>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="restaurantQuery" placeholder="Type in to search"/>
+        </div>
+    </div>
+    <div class="restaurant-list">
+        <div class="restaurant-item row" ng-repeat="restaurant in restaurants | filter: restaurantQuery">
+            <!--
+                'ngSrc' directive
+                -----------------
+                Instead of setting the ngStyle 'background-image' css property and 'url(\''+variable+'\')' expression,
+                we can set up an image tag 'img' with an ngSrc ~ 'ng-src' directive that will achieve image display also.
+
+                Note: Using 'background-image' has its benefits, but for this lesson we want to explain 'ng-src'.
+
+                'ngSrc' directive has to be used differently than other html directives (e.g. ngBind)
+                In standard directives you only need to pass a reference to the variable,
+                but in 'ngSrc' you need to pass the actual value.
+
+                As you can see in the following line to a 'ng-src' we are passing the variable value.
+                -> 'ng-src="{{restaurant.img}}"'
+              -->
+            <img class="restaurant-item-image col-md-3" ng-src="{{restaurant.img}}" />
+            <!--<div class="restaurant-item-image col-md-3" ng-style="{'background-image': 'url(\'' +restaurant.img+ '\')'}"></div>-->
+            <div class="restaurant-item-content col-md-8">
+                <!--
+                    'ngHref' directive
+                    ------------------
+                    As you have probably presumed, 'ngHref' is a directive made specially for <A> link tag.
+                    It should contain the URL of a certain web location.
+
+                    Its proper way of usage is similar to the 'ngSrc' directive.
+                    That means that you need to pass it a value, in order to make it work. {{ variable }}
+
+                    In our case we want to specify an id of a restaurant.
+
+                    Note: {{ variable }} - returns the VALUE of the variable. Meaning, that when you are adding
+                          String values with handlebar variables you do not need to use a concatenation symbol '+'.
+                          You can see it in our example in the following line.
+
+                          -> ng-href="/restaurants/{{restaurant.id}}"
+                -->
+                <a class="restaurant-item-title" ng-bind="restaurant.title" ng-href="/restaurant/{{restaurant.id}}"></a>
+                <div class="restaurant-item-address">
+                    <span class="glyphicon glyphicon-home"></span> <span ng-bind="restaurant.address"></span>
+                </div>
+                <div class="restaurant-item-telephone">
+                    <span class="glyphicon glyphicon-earphone"></span> <span ng-bind="restaurant.telephone"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
