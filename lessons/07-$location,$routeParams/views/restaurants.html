@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="restaurant-search row">
+        <span class="col-md-8">Choose restaurants:</span>
+        <div class="col-md-4">
+            <input type="text" class="form-control" ng-model="restaurantQuery" placeholder="Type in to search"/>
+        </div>
+    </div>
+    <div class="restaurant-list">
+        <div class="restaurant-item row" ng-repeat="restaurant in restaurants | filter: restaurantQuery">
+            <div class="restaurant-item-image col-md-3" ng-style="{'background-image': 'url(\'' +restaurant.img+ '\')'}"></div>
+            <div class="restaurant-item-content col-md-8">
+                <a class="restaurant-item-title" ng-bind="restaurant.title" ng-href="#/restaurant/{{restaurant.id}}"></a>
+                <!--<a class="restaurant-item-title" ng-bind="restaurant.title" ng-click="openRestaurantDetail(restaurant)"></a>-->
+                <div class="restaurant-item-address">
+                    <span class="glyphicon glyphicon-home"></span> <span ng-bind="restaurant.address"></span>
+                </div>
+                <div class="restaurant-item-telephone">
+                    <span class="glyphicon glyphicon-earphone"></span> <span ng-bind="restaurant.telephone"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
