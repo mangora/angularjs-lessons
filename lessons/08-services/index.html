@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="lunchApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mangora Angular.js lessons">
+    <meta name="author" content="simalexan">
+    <title>Angular Introductory ~ 08 - services (10 minutes - 1 feature)</title>
+
+    <!-- Latest compiled and minified Bootstrap 3 CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- Optional theme for Bootstrap-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/examples/navbar/navbar.css">
+    <!-- this is our custom css for this lesson -->
+    <link rel="stylesheet" href="./styles/lunchApp.css">
+    <link rel="stylesheet" href="./styles/restaurantDetail.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Developers Lunch app - Angular.js lessons</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#/restaurants">Restaurants</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+    <!--/.navbar navbar-default -->
+
+    <!-- application templates are being loaded inside the ng-view -->
+    <div ng-view=""></div>
+
+
+</div>
+<!-- /.container -->
+
+<!-- start of our javascript files -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+<script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.min.js"></script>
+
+<!-- our application script -->
+<script type="text/javascript" src="scripts/lunchApp.js"></script>
+<script type="text/javascript" src="scripts/controllers/restaurantsController.js"></script>
+<script type="text/javascript" src="scripts/controllers/restaurantController.js"></script>
+<script type="text/javascript" src="scripts/services/restaurantsService.js"></script>
+<!-- end of javascript files -->
+</body>
+</html>
