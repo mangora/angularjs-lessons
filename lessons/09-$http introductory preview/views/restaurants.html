@@ -8,12 +8,11 @@
     </div>
     <div class="restaurant-list">
         <div class="restaurant-item row" ng-repeat="restaurant in restaurants | filter: restaurantQuery">
-            <div class="restaurant-item-image col-md-3"
-                 ng-style="{'background-image': 'url(\'' +restaurant.img+ '\')'}"></div>
+            <img class="restaurant-item-image col-md-3" ng-src="{{restaurant.img}}"/>
+
             <div class="restaurant-item-content col-md-8">
-                <!--<a class="restaurant-item-title" ng-bind="restaurant.title" ng-href="#/restaurant/{{restaurant.id}}"></a>-->
                 <a class="restaurant-item-title" ng-bind="restaurant.title"
-                   ng-click="openRestaurantDetail(restaurant)"></a>
+                   ng-href="#/restaurant/{{restaurant.id}}"></a>
 
                 <div class="restaurant-item-address">
                     <span class="glyphicon glyphicon-home"></span> <span ng-bind="restaurant.address"></span>
@@ -21,6 +20,12 @@
                 <div class="restaurant-item-telephone">
                     <span class="glyphicon glyphicon-earphone"></span> <span ng-bind="restaurant.telephone"></span>
                 </div>
+            </div>
+            <div class="restaurant-item-controls col-md-3 pull-right">
+                <button class="btn btn-primary" ng-click="showRestaurantDetails(restaurant)">
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                    Restaurant details
+                </button>
             </div>
         </div>
     </div>

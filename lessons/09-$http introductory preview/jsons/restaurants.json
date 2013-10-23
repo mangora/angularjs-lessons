@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "img": "http://www.kmn.rs/images/kmn-prodavnice/kmn-prodavnica-3.jpg",
+        "title": "KMN",
+        "address": "TC Milenijum",
+        "telephone": "011 328 55 91",
+        "meals": [
+            {
+                "mealId": 1,
+                "name": "Mashed potatoes",
+                "imageUrl": "http://lh5.ggpht.com/_X6DDSOV_Vyw/THJW4glw8KI/AAAAAAAAKMU/0sKMkU1OIa0/s800/IMG_1775blog.jpg"
+            },
+            {
+                "mealId": 4,
+                "name": "Turkey fillet meat with rice and soy sprouts",
+                "imageUrl": "http://thumbs.dreamstime.com/x/grilled-turkey-fillet-rice-soy-sprouts-12947967.jpg"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "img": "http://static.panoramio.com/photos/large/64915565.jpg",
+        "title": "Restoran Mikan",
+        "address": "Maršala Birjuzova 14",
+        "telephone": "011 328 49 00",
+        "meals": [
+            {
+                "mealId": 2,
+                "name": "Chicken drumstick",
+                "imageUrl": "http://3.bp.blogspot.com/-buwqFP62w5s/UMEp48lZZhI/AAAAAAAAD2c/yD257JlauQI/s1600/Cajun+Chicken+Drumsticks.jpg"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "img": "http://www.011info.com/firms/3808/1.jpg",
+        "title": "Glumac",
+        "address": "Braće Jugovića 64",
+        "telephone": "011 262 82 48",
+        "meals": [
+            {
+                "mealId": 3,
+                "name": "Ham, cheese and cream pancake",
+                "imageUrl": "http://www.unanchor.com/uploads/user/images/830/Palacinke.JPG"
+            }
+        ]
+    }
+]
