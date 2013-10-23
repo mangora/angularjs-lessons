@@ -6,6 +6,22 @@ lunchApp.service('Restaurants', function ($http) {
     return {
         restaurants: [],
         getAll: function () {
+            /**
+             * $http ~ represents one of the core modules in Angular.js responsible for handling HTTP requests
+             *         Besides '$http.get' method it also the following ones:
+             *              - $http.post
+             *              - $http.head
+             *              - $http.put
+             *              - $http.delete
+             *              - $http.jsonp
+             *
+             *  Each of those methods is is equal to
+             *      $http({method: 'METHOD', url: 'someUrl'})
+             *
+             *  In our case it could be written as
+             *      $http({method: 'GET', url: 'jsons/restaurants.json'})
+             *
+             */
             return $http.get('jsons/restaurants.json').then(function (response) {
                 return response.data;
             });
