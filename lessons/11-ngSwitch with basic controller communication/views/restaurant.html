@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="jumbotron">
+
+        <div class="restaurant-detail-content row">
+            <div class="restaurant-detail-image col-md-4"
+                 ng-style="{'background-image': 'url(\'' +restaurant.img+ '\')'}"></div>
+            <div class="restaurant-detail-contact col-md-7">
+                <h2 ng-bind="restaurant.title"></h2>
+
+                <div class="restaurant-detail-address">
+                    <span class="glyphicon glyphicon-home"></span> <span ng-bind="restaurant.address"></span>
+                </div>
+                <div class="restaurant-detail-telephone">
+                    <span class="glyphicon glyphicon-earphone"></span> <span ng-bind="restaurant.telephone"></span>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="list-group">
+        <div class="list-group-item row" ng-repeat="meal in restaurant.meals">
+            <div class="row">
+                <img ng-src="{{meal.imageUrl}}" class="meal-thumbnail-image col-md-4"/>
+                <h4 class="meal-item-heading col-md-7" ng-bind="meal.name"></h4>
+            </div>
+            <div class="row">
+                <button class="btn btn-success pull-right" ng-click="orderMeal(meal)">Add Meal</button>
+            </div>
+        </div>
+    </div>
+</div>

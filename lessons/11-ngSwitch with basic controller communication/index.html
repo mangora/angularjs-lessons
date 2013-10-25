@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="lunchApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mangora Angular.js lessons">
+    <meta name="author" content="simalexan">
+    <title>Angular Introductory ~ 11 - ngSwitch with basic controller communication (10 minutes - 1 feature)</title>
+
+    <!-- Latest compiled and minified Bootstrap 3 CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- Optional theme for Bootstrap-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://getbootstrap.com/examples/navbar/navbar.css">
+    <!-- this is our custom css for this lesson -->
+    <link rel="stylesheet" href="./styles/lunchApp.css">
+    <link rel="stylesheet" href="./styles/restaurantDetail.css">
+    <link rel="stylesheet" href="./styles/order.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Developers Lunch app - Angular.js lessons</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#/restaurants">Restaurants</a></li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+    <!--/.navbar navbar-default -->
+    <div class="main-content row">
+        <!-- application templates are being loaded inside the ng-view -->
+        <div class="central-content col-md-10" ng-view=""></div>
+        <div class="side-content col-md-2" ng-controller="OrderCtrl">
+            <h4 class="order-title">Your order</h4>
+            <hr>
+            <div class="order" ng-switch="orderItems.length">
+                <div ng-switch-when="0">
+                    You haven't ordered anything!
+                </div>
+                <div ng-switch-default>
+                    <ul>
+                        <li ng-repeat="item in orderItems">
+                            <span ng-bind="item.name"></span>
+                        </li>
+                    </ul>
+                    <hr>
+                    <button class="btn btn-success btn-complete-order">Complete order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!-- /.container -->
+
+<!-- start of our javascript files -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js"></script>
+<script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-route.min.js"></script>
+
+<!-- our application script -->
+<script type="text/javascript" src="scripts/lunchApp.js"></script>
+<script type="text/javascript" src="scripts/controllers/restaurantsController.js"></script>
+<script type="text/javascript" src="scripts/controllers/restaurantController.js"></script>
+<script type="text/javascript" src="scripts/controllers/orderController.js"></script>
+<script type="text/javascript" src="scripts/services/restaurantsService.js"></script>
+<script type="text/javascript" src="scripts/services/orderService.js"></script>
+<!-- end of javascript files -->
+</body>
+</html>
