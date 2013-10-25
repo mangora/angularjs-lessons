@@ -35,9 +35,17 @@
     <div class="main-content row">
         <!-- application templates are being loaded inside the ng-view -->
         <div class="central-content col-md-10" ng-view=""></div>
+        <!--
+            The order sidebar that will show the current order
+        -->
         <div class="side-content col-md-2" ng-controller="OrderCtrl">
             <h4 class="order-title">Your order</h4>
             <hr>
+            <!--
+                ng-switch directive
+                ~ represents a directive that shows certain parts of HTML depending on the expression
+                Behaves exactly as a switch-case statement
+            -->
             <div class="order" ng-switch="orderItems.length">
                 <div ng-switch-when="0">
                     You haven't ordered anything!

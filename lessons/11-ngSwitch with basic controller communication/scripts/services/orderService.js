@@ -3,6 +3,9 @@
  */
 
 lunchApp.service('Order', function () {
+    /**
+     * Just an order items array in which we will hold the items
+     */
     return {
         items: []
     }
