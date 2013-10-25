@@ -20,10 +20,20 @@
     </div>
     <div class="list-group">
         <div class="list-group-item row" ng-repeat="meal in restaurant.meals">
-                <img ng-src="{{meal.imageUrl}}" class="meal-thumbnail-image col-md-4"/>
-            <h4 class="meal-item-heading col-md-6" ng-bind="meal.name"></h4>
+            <img ng-src="{{meal.imageUrl}}" class="meal-thumbnail-image col-md-4"/>
+
+            <div class="col-md-6 row">
+                <h4 class="meal-item-heading col-md-12" ng-bind="meal.name"></h4>
+
+                <div class="col-md-12">
+                    <span>Quantity: </span><span> 1 </span>
+                </div>
+                <div class="col-md-12">
+                    <span>Price: </span><span></span>
+                </div>
+            </div>
             <button class="btn btn-success col-md-2 pull-right" ng-click="orderMeal(meal)"><span
-                    class="glyphicon glyphicon-plus"></span> Add Meal
+                    class="glyphicon glyphicon-plus"></span> Order it!
             </button>
         </div>
     </div>
