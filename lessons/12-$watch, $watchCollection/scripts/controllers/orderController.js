@@ -14,7 +14,6 @@ lunchApp.controller('OrderCtrl', function ($scope, Order) {
     /**
      * orderTotal function that computes (!) the ordered items prices and the appropriate discount
      *
-     * @returns {number}
      */
     var calculateOrderTotal = function () {
         var total = 0;
