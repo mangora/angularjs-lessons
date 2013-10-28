@@ -63,8 +63,9 @@
                         If there is a discount (orderDiscount > 0) we also show the actual price
                     -->
                     <div ng-show="orderDiscount > 0">
-                        <strong>Actual cost is <span
-                                ng-bind="orderTotal - (orderTotal / orderDiscount)"></span></strong>
+                        <strong>
+                            Actual cost is <span ng-bind="orderTotal - (orderTotal / orderDiscount)"></span>
+                        </strong>
                     </div>
                     <hr>
                     <button class="btn btn-success btn-complete-order">Complete order</button>
