@@ -1,0 +1,55 @@
+.restaurant-search {
+    height: 50px;
+}
+
+.restaurant-search span {
+    font-size: 24px;
+}
+
+.restaurant-list {
+    width: 100%;
+}
+
+.restaurant-item {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.restaurant-item-image {
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-size: 150px 150px;
+    min-height: 150px;
+}
+
+.restaurant-item-content {
+    height: 150px;
+    margin: 20px 0 20px 0;
+}
+
+.restaurant-item-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.restaurant-item-address {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.restaurant-item-telephone {
+    font-size: 14px;
+}
+
+.restaurant-item-controls {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,20 @@
+.restaurant-detail-image {
+    margin: 20px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 350px 250px;
+
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.meal-thumbnail-image {
+
+    width: 180px;
+    height: 120px;
+}
+
+.meal-item-controls {
+    margin-bottom: 20px;
+}

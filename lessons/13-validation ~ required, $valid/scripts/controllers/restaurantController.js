@@ -6,8 +6,7 @@ lunchApp.controller('RestaurantCtrl', function ($scope, $routeParams, Restaurant
     $scope.restaurant = Restaurants.getById($routeParams.id);
 
     /**
-     * @description Checking up if the meal is already on the order
-     *              and then adding to the order via Order service.
+     * Function for ordering a meal via Service
      * @param meal
      */
     $scope.orderMeal = function (meal) {
@@ -18,9 +17,8 @@ lunchApp.controller('RestaurantCtrl', function ($scope, $routeParams, Restaurant
     };
 
     /**
-     * @description This is an override of the indexOf function just for Order.items and only here in this controller.
-     *
-     * Note: Will show a proper one when we get to the prototypes in the following lessons.
+     * This is an override of the indexOf function, but just for Order.items and only here in the controller
+     * Note: Will show a better one when we get to the prototypes
      *
      * @param item
      * @returns {number}

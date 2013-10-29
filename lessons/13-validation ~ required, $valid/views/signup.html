@@ -1,0 +1,60 @@
+<div class="jumbotron">
+    <h2>Sign up</h2>
+    <!-- If we want to have a little bit more complex Angular validation logic, we should specify the form name -->
+    <form name="signUpForm" role="form">
+        <div class="row">
+            <!--
+                To each form in the views, Angular adds the $valid module property which represents if the form is valid.
+                $valid returns a Boolean value { true | false }
+                This alert message will be shown when the signUpForm form isn't valid ~ using the form $valid property.
+            -->
+            <div class="alert alert-info form-message" ng-show="!signUpForm.$valid"> Please be sure to fill up all
+                required fields
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="firstName"> First name: </label>
+                <!--
+                    If we want to make an input field required for the form, we need only write down the 'required' attr
+                    in the input tag.
+                -->
+                <input id="firstName" class="form-control" type="text" ng-model="user.firstName" required/>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="lastName"> Last name: </label>
+                <input id="lastName" class="form-control" type="text" ng-model="user.lastName" required/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email"> Email: </label>
+            <!--
+                Based on the input type attribute value, in this case 'email', Angular will do the validation
+                and check that the input value is in a proper email structure
+            -->
+            <input id="email" class="form-control" type="email" ng-model="user.email" required/>
+        </div>
+        <div class="form-group">
+            <label for="password"> Password: </label>
+            <input id="password" class="form-control" type="password" ng-model="user.password" required/>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="age"> Age: </label>
+                <!--
+                    Angular will also validate this input if its a number
+                -->
+                <input type="number" id="age" class="form-control" ng-model="user.age" maxlength="3" required/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <!--
+                We can also disable the sign up button by inserting the ' ng-disabled="!signUpForm.$valid" ' attribute in
+                the submit button.
+            -->
+            <button class="btn btn-success col-md-3 col-md-offset-4">Complete your registration</button>
+        </div>
+    </form>
+</div>
