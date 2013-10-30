@@ -28,6 +28,7 @@ e.g. User should be able to order two chicken drumsticks and the app should show
 Make a Numeric stepper for the Meal item quantity on Restaurant Detail view. So that you can order a specific quantity
 of selected meals and based on that do a refactor of the order discount calculate function.
 
+
 #### 2. Meal details ####
 
 User should be able to click on a meal and see its details on a separate page. The Meal Details page should be similar
@@ -36,6 +37,7 @@ to the Restaurant Details page.
 *Small hint*:
 You should have a Meal view, controller and a service for getting the meal. For now, the service should get all
 restaurants and load up the specified meal based on the meal id.
+
 
 #### 3. Meal and Restaurant custom filter search ####
 
