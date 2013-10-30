@@ -12,8 +12,8 @@ In order to fully grasp the previous lessons you will be given a set of three ta
 ##### These tasks should be done by yourself. Helping each other is **not** allowed.
 Note: Only if a colleague of yours is stuck with something and can not solve it, then you are encouraged to help.
 
-#### Important! The solutions for all these tasks should be in one project and you should put in a JSFiddle.
-#### After that send me an email with the JSFiddle link. Thank you.
+##### Important! The solutions for all these tasks should be in one project and you should put in a JSFiddle.
+####$ After that send me an email with the JSFiddle link. Thank you.
 
 ##### A more detailed description of tasks is going to follow.
 
