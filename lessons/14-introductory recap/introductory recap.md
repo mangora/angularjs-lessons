@@ -13,7 +13,7 @@ In order to fully grasp the previous lessons you will be given a set of three ta
 Note: Only if a colleague of yours is stuck with something and can not solve it, then you are encouraged to help.
 
 ##### Important! The solutions for all these tasks should be in one project and you should put in a JSFiddle.
-##### After that send me an email with the [Plunker](http://plnkr.co/) link. Thank you.
+##### After that send me an email with a [Plunker](http://plnkr.co/) link. Thank you.
 
 ##### A more detailed description of tasks is going to follow.
 
